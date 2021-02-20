@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using DiscordRPC;
 using static Slurp_Juice_.Forms.Controls.Injector;
+using static Slurp_Juice_.Main;
 
 namespace Slurp_Juice_.Handler
 {
@@ -27,7 +28,7 @@ namespace Slurp_Juice_.Handler
             client.SetPresence(new RichPresence()
             {
                 Details = $"Slurp Juice {Main.Version} | Attached: {attached}",
-                State = $"Slurrpin on da juice",
+                State = $"Viewing homepage", //you start on the homepage, no need for a if statement :pog:
                 Assets = new Assets()
                 {
                     LargeImageKey = "slurpjuice",
@@ -50,18 +51,51 @@ namespace Slurp_Juice_.Handler
             });
         }
         
+        //this is really bad
+        //i wanna kms 
+        //too many fucking if statements
+        //could probably do a case statement but im lazy lol
         public static void Update()
         {
-            client.SetPresence(new RichPresence()
+            if (HomeControl == true)
             {
-                Details = $"Slurp Juice {Main.Version} | Attached: {attached}",
-                State = $"Slurrpin on da juice",
-                Assets = new Assets()
+                client.SetPresence(new RichPresence()
                 {
-                    LargeImageKey = "slurpjuice",
-                    LargeImageText = "Slurp Juice open source",
-                }
-            });
+                    Details = $"Slurp Juice {Main.Version} | Attached: {attached}",
+                    State = $"Viewing homepage",
+                    Assets = new Assets()
+                    {
+                        LargeImageKey = "slurpjuice",
+                        LargeImageText = "Slurp Juice open source",
+                    }
+                });
+            }
+            if (InjectorControl == true)
+            {
+                client.SetPresence(new RichPresence()
+                {
+                    Details = $"Slurp Juice {Main.Version} | Attached: {attached}",
+                    State = $"Viewing injector",
+                    Assets = new Assets()
+                    {
+                        LargeImageKey = "slurpjuice",
+                        LargeImageText = "Slurp Juice open source",
+                    }
+                });
+            }
+            if (SettingsControl == true)
+            {
+                client.SetPresence(new RichPresence()
+                {
+                    Details = $"Slurp Juice {Main.Version} | Attached: {attached}",
+                    State = $"Viewing settings",
+                    Assets = new Assets()
+                    {
+                        LargeImageKey = "slurpjuice",
+                        LargeImageText = "Slurp Juice open source",
+                    }
+                });
+            }
         }
 
         public static void OpenState()
