@@ -9,12 +9,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Slurp_Juice_.Handler;
+using System.Threading;
 
 namespace Slurp_Juice_
 {
     public partial class Main : Form
     {
         public static string Version = "1.0";
+        public static bool HomeControl;
+        public static bool InjectorControl;
+        public static bool SettingsControl;
 
         public Main()
         {
@@ -26,8 +30,10 @@ namespace Slurp_Juice_
             SlurpConsole.Welcome();
         }
 
-        private void Main_Load(object sender, EventArgs e)
+        public void Main_Load(object sender, EventArgs e)
         {
+            var Form = new Main();
+            UI.Home();
             versionLabel.Text = Version;
             var Home = new Forms.Controls.Home();
             controlPanel.Controls.Add(Home);
@@ -40,6 +46,8 @@ namespace Slurp_Juice_
 
         private void homeBtn_Click(object sender, EventArgs e)
         {
+            UI.ResetBools();
+            UI.Home();
             Discord.Update();
             controlPanel.Controls.Clear();
             var Home = new Forms.Controls.Home();
@@ -48,6 +56,9 @@ namespace Slurp_Juice_
 
         private void injectorBtn_Click(object sender, EventArgs e)
         {
+            UI.Injector();
+            UI.ResetBools();
+            UI.Injector();
             Discord.Update();
             controlPanel.Controls.Clear();
             var Injector = new Forms.Controls.Injector();
@@ -56,8 +67,31 @@ namespace Slurp_Juice_
 
         private void settingsBtn_Click(object sender, EventArgs e)
         {
+            UI.ResetBools();
+            UI.Settings();
             Discord.Update();
             controlPanel.Controls.Clear();
+            var Settings = new Forms.Controls.Settings();
+            controlPanel.Controls.Add(Settings);
+        }
+
+        //this has to be threaded because loading the editor files can cause freezing, so put it on another thread :pog:
+        //threading makes it not load lolz :pog: plz someone fix this for me 
+        //for now it may freeze
+        private void InjectorThread()
+        {
+            Thread thread = new Thread(InjectBtnFunction);
+        }
+
+        private void InjectBtnFunction()
+        {
+            UI.Injector();
+            UI.ResetBools();
+            UI.Injector();
+            Discord.Update();
+            controlPanel.Controls.Clear();
+            var Injector = new Forms.Controls.Injector();
+            controlPanel.Controls.Add(Injector);
         }
     }
 }
