@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static Slurp_Juice_.Forms.Controls.Injector;
 using EasyExploits;
+using System.Threading;
 
 namespace Slurp_Juice_.Handler
 {
@@ -32,9 +33,19 @@ namespace Slurp_Juice_.Handler
             api.LaunchExploit();
         }
 
+        public static void AttachThread()
+        {
+            Thread thread = new Thread(Attach);
+        }
+
         public static void InjectLUA()
         {
             api.ExecuteScript(scriptstring);
+        }
+
+        public static void InjectThread()
+        {
+            Thread thread = new Thread(InjectLUA);
         }
     }
 }
