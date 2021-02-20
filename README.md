@@ -9,6 +9,9 @@ Slurp Juice+ is Slurp Juice recoded, using a new text editor, a new api, and new
 # Contributing
 Feel free to make a [Pull Request](https://github.com/graalpurity/Slurp-Juice-/pulls) or you can join our [Discord](https://discord.gg/K8VQZutWkA) to contribute in the coding channels
 
+# Ace Edutir
+Where ever you choose the build location you need to place the folder "ace" in there for the text editor to load
+
 # Discord
 Our [discord](https://discord.gg/K8VQZutWkA) is for people who want to contribute, want to exploit together, or just want to have fun in a community with others like them
 
