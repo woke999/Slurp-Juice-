@@ -66,10 +66,5 @@ namespace Slurp_Juice_.Forms.Controls
                 reader.Close();
             }
         }
-
-        private void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
-        {
-
-        }
     }
 }

@@ -43,7 +43,6 @@ namespace Slurp_Juice_.Forms.Controls
             this.webBrowser1.Size = new System.Drawing.Size(763, 383);
             this.webBrowser1.TabIndex = 0;
             this.webBrowser1.Url = new System.Uri("", System.UriKind.Relative);
-            this.webBrowser1.DocumentCompleted += new System.Windows.Forms.WebBrowserDocumentCompletedEventHandler(this.webBrowser1_DocumentCompleted);
             // 
             // attachBtn
             // 
