@@ -4,8 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DiscordRPC;
+using static Slurp_Juice_.Handler.UI;
 using static Slurp_Juice_.Forms.Controls.Injector;
-using static Slurp_Juice_.Main;
 
 namespace Slurp_Juice_.Handler
 {
@@ -89,6 +89,19 @@ namespace Slurp_Juice_.Handler
                 {
                     Details = $"Slurp Juice {Main.Version} | Attached: {attached}",
                     State = $"Viewing settings",
+                    Assets = new Assets()
+                    {
+                        LargeImageKey = "slurpjuice",
+                        LargeImageText = "Slurp Juice open source",
+                    }
+                });
+            }
+            if (ThemeControl == true)
+            {
+                client.SetPresence(new RichPresence()
+                {
+                    Details = $"Slurp Juice {Main.Version} | Attached: {attached}",
+                    State = $"Viewing themes",
                     Assets = new Assets()
                     {
                         LargeImageKey = "slurpjuice",
