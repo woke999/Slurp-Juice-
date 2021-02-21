@@ -37,7 +37,7 @@ namespace Slurp_Juice_
             this.exitBtn = new Guna.UI2.WinForms.Guna2ControlBox();
             this.miniBtn = new Guna.UI2.WinForms.Guna2ControlBox();
             this.controlPanel = new Guna.UI2.WinForms.Guna2Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.buttonPanel = new System.Windows.Forms.Panel();
             this.settingsBtn = new Guna.UI2.WinForms.Guna2Button();
             this.injectorBtn = new Guna.UI2.WinForms.Guna2Button();
             this.homeBtn = new Guna.UI2.WinForms.Guna2Button();
@@ -45,7 +45,8 @@ namespace Slurp_Juice_
             this.versionLabel = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.apiLabel = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.panel1.SuspendLayout();
+            this.themeBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.buttonPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2HtmlLabel1
@@ -110,17 +111,18 @@ namespace Slurp_Juice_
             this.controlPanel.Size = new System.Drawing.Size(769, 443);
             this.controlPanel.TabIndex = 3;
             // 
-            // panel1
+            // buttonPanel
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
-            this.panel1.Controls.Add(this.settingsBtn);
-            this.panel1.Controls.Add(this.injectorBtn);
-            this.panel1.Controls.Add(this.homeBtn);
-            this.panel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
-            this.panel1.Location = new System.Drawing.Point(12, 32);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(136, 443);
-            this.panel1.TabIndex = 4;
+            this.buttonPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
+            this.buttonPanel.Controls.Add(this.themeBtn);
+            this.buttonPanel.Controls.Add(this.settingsBtn);
+            this.buttonPanel.Controls.Add(this.injectorBtn);
+            this.buttonPanel.Controls.Add(this.homeBtn);
+            this.buttonPanel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
+            this.buttonPanel.Location = new System.Drawing.Point(12, 32);
+            this.buttonPanel.Name = "buttonPanel";
+            this.buttonPanel.Size = new System.Drawing.Size(136, 443);
+            this.buttonPanel.TabIndex = 4;
             // 
             // settingsBtn
             // 
@@ -195,11 +197,11 @@ namespace Slurp_Juice_
             this.versionLabel.BackColor = System.Drawing.Color.Transparent;
             this.versionLabel.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.versionLabel.ForeColor = System.Drawing.Color.White;
-            this.versionLabel.Location = new System.Drawing.Point(216, -3);
+            this.versionLabel.Location = new System.Drawing.Point(210, -3);
             this.versionLabel.Name = "versionLabel";
-            this.versionLabel.Size = new System.Drawing.Size(13, 20);
+            this.versionLabel.Size = new System.Drawing.Size(31, 20);
             this.versionLabel.TabIndex = 6;
-            this.versionLabel.Text = "0";
+            this.versionLabel.Text = "N/A";
             // 
             // guna2HtmlLabel3
             // 
@@ -217,11 +219,30 @@ namespace Slurp_Juice_
             this.apiLabel.BackColor = System.Drawing.Color.Transparent;
             this.apiLabel.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.apiLabel.ForeColor = System.Drawing.Color.White;
-            this.apiLabel.Location = new System.Drawing.Point(315, -3);
+            this.apiLabel.Location = new System.Drawing.Point(309, -3);
             this.apiLabel.Name = "apiLabel";
-            this.apiLabel.Size = new System.Drawing.Size(13, 20);
+            this.apiLabel.Size = new System.Drawing.Size(31, 20);
             this.apiLabel.TabIndex = 8;
-            this.apiLabel.Text = "0";
+            this.apiLabel.Text = "N/A";
+            // 
+            // themeBtn
+            // 
+            this.themeBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.themeBtn.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.themeBtn.CheckedState.Parent = this.themeBtn;
+            this.themeBtn.CustomImages.Parent = this.themeBtn;
+            this.themeBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.themeBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.themeBtn.ForeColor = System.Drawing.Color.White;
+            this.themeBtn.HoverState.Parent = this.themeBtn;
+            this.themeBtn.Location = new System.Drawing.Point(3, 162);
+            this.themeBtn.Name = "themeBtn";
+            this.themeBtn.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.themeBtn.ShadowDecoration.Parent = this.themeBtn;
+            this.themeBtn.Size = new System.Drawing.Size(130, 48);
+            this.themeBtn.TabIndex = 3;
+            this.themeBtn.Text = "Theme";
+            this.themeBtn.Click += new System.EventHandler(this.themeBtn_Click);
             // 
             // Main
             // 
@@ -233,7 +254,7 @@ namespace Slurp_Juice_
             this.Controls.Add(this.guna2HtmlLabel3);
             this.Controls.Add(this.versionLabel);
             this.Controls.Add(this.guna2HtmlLabel2);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.buttonPanel);
             this.Controls.Add(this.controlPanel);
             this.Controls.Add(this.miniBtn);
             this.Controls.Add(this.exitBtn);
@@ -243,7 +264,7 @@ namespace Slurp_Juice_
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Main";
             this.Load += new System.EventHandler(this.Main_Load);
-            this.panel1.ResumeLayout(false);
+            this.buttonPanel.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -254,17 +275,18 @@ namespace Slurp_Juice_
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2DragControl mainDragControl;
         private Guna.UI2.WinForms.Guna2ResizeForm mainResizeControl;
-        private Guna.UI2.WinForms.Guna2ControlBox exitBtn;
-        private Guna.UI2.WinForms.Guna2ControlBox miniBtn;
-        private System.Windows.Forms.Panel panel1;
-        private Guna.UI2.WinForms.Guna2Button homeBtn;
-        private Guna.UI2.WinForms.Guna2Button injectorBtn;
-        private Guna.UI2.WinForms.Guna2Button settingsBtn;
         public Guna.UI2.WinForms.Guna2Panel controlPanel;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
         private Guna.UI2.WinForms.Guna2HtmlLabel versionLabel;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
         public Guna.UI2.WinForms.Guna2HtmlLabel apiLabel;
+        public Guna.UI2.WinForms.Guna2Button themeBtn;
+        public Guna.UI2.WinForms.Guna2Button homeBtn;
+        public Guna.UI2.WinForms.Guna2Button injectorBtn;
+        public Guna.UI2.WinForms.Guna2Button settingsBtn;
+        public System.Windows.Forms.Panel buttonPanel;
+        public Guna.UI2.WinForms.Guna2ControlBox exitBtn;
+        public Guna.UI2.WinForms.Guna2ControlBox miniBtn;
     }
 }
 

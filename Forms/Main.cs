@@ -15,10 +15,7 @@ namespace Slurp_Juice_
 {
     public partial class Main : Form
     {
-        public static string Version = "1.0";
-        public static bool HomeControl;
-        public static bool InjectorControl;
-        public static bool SettingsControl;
+        public static string Version = "1.1";
 
         public Main()
         {
@@ -73,6 +70,16 @@ namespace Slurp_Juice_
             controlPanel.Controls.Clear();
             var Settings = new Forms.Controls.Settings();
             controlPanel.Controls.Add(Settings);
+        }
+
+        private void themeBtn_Click(object sender, EventArgs e)
+        {
+            UI.ResetBools();
+            UI.Theme();
+            Discord.Update();
+            controlPanel.Controls.Clear();
+            var Theme = new Forms.Controls.Theme();
+            controlPanel.Controls.Add(Theme);
         }
 
         //this has to be threaded because loading the editor files can cause freezing, so put it on another thread :pog:

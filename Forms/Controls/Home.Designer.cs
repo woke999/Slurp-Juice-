@@ -63,9 +63,9 @@ namespace Slurp_Juice_.Forms.Controls
             this.guna2HtmlLabel3.ForeColor = System.Drawing.Color.White;
             this.guna2HtmlLabel3.Location = new System.Drawing.Point(277, 172);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            this.guna2HtmlLabel3.Size = new System.Drawing.Size(169, 27);
+            this.guna2HtmlLabel3.Size = new System.Drawing.Size(366, 27);
             this.guna2HtmlLabel3.TabIndex = 3;
-            this.guna2HtmlLabel3.Text = "Using Ace Editor";
+            this.guna2HtmlLabel3.Text = "Fixed handlers, added settings page";
             // 
             // Home
             // 
