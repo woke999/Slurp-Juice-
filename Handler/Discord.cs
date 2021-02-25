@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -51,6 +51,7 @@ namespace Slurp_Juice_.Handler
             });
         }
         
+		//basically this checks the bools in the ui handler and updates based off which is true
         //this is really bad
         //i wanna kms 
         //too many fucking if statements
@@ -125,12 +126,15 @@ namespace Slurp_Juice_.Handler
             });
         }
 
-
+		//you need to deinitilize the discord client when the program exits otherwise it may not shutdown properly 
         public static void ShutDown()
         {
             client.Deinitialize();
         }
 
+
+		//just a personal status for me 
+		//you can make a button in the settings control and have it set to this
         public static void DevStatus()
         {
             client.SetPresence(new RichPresence()
@@ -159,7 +163,10 @@ namespace Slurp_Juice_.Handler
             });
         }
 
-        public static void SettingsStart() //this is for restarting the discord RPC on the settings page
+		//this is for restarting the discord RPC on the settings page
+		//i currently dont have a button for that but you can update it to add one
+		//for that just had a button to stop discord presence and one for restarting it
+        public static void SettingsStart()
         {
             if (!client.IsInitialized)
             {
@@ -177,6 +184,8 @@ namespace Slurp_Juice_.Handler
             });
         }
 
+
+		//i plan on adding a dev settings control eventually :)
         public static void DevSettings()
         {
             client.SetPresence(new RichPresence()

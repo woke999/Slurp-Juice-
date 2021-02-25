@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
@@ -16,11 +16,13 @@ namespace Slurp_Juice_.Handler
         public static bool SettingsControl;
         public static bool ThemeControl;
 
+        //reset all of the bools, the program checks bools often for the discord presence, so when you open a new control you reset the bools and then set which one is opened
         public static void ResetBools()
         {
             HomeControl = false;
             InjectorControl = false;
             SettingsControl = false;
+			ThemeControl = false;
         }
 
         public static void Home()
@@ -65,6 +67,7 @@ namespace Slurp_Juice_.Handler
             Form.miniBtn.BorderColor = Black;
             Form.miniBtn.FillColor = Black;
             Form.miniBtn.PressedColor = Black;
+            //
         }
     }
 }

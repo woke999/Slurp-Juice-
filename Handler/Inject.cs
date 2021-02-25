@@ -1,4 +1,5 @@
-﻿using Slurp_Juice_.Forms.Controls;
+//none of the threaded functions work. probably due to the api itself not being threaded or something. not sure.
+using Slurp_Juice_.Forms.Controls;
 using System;
 using System.Collections.Generic;
 using System.Linq;

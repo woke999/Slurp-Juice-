@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.InteropServices;
@@ -18,7 +18,9 @@ namespace Slurp_Juice_.Handler
         {
             Console.Title = $"Slurp Juice {Main.Version} Debug Console | Attached: {attached}";
         }
-
+        
+        
+		//these are currently the same function checking if the attached bool has changed, but im working on new functions for the console so this will change
         public static void Update()
         {
             Console.Title = $"Slurp Juice {Main.Version} Debug Console | Attached: {attached}";
