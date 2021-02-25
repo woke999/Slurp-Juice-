@@ -1,4 +1,4 @@
-﻿using Slurp_Juice_.Forms.Controls;
+using Slurp_Juice_.Forms.Controls;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -83,8 +83,8 @@ namespace Slurp_Juice_
         }
 
         //this has to be threaded because loading the editor files can cause freezing, so put it on another thread :pog:
-        //threading makes it not load lolz :pog: plz someone fix this for me 
-        //for now it may freeze
+        //threading makes it not load lolz :pog: plz someone fix this for me.
+        //for now it will freeze lmfao
         private void InjectorThread()
         {
             Thread thread = new Thread(InjectBtnFunction);
@@ -92,8 +92,8 @@ namespace Slurp_Juice_
 
         private void InjectBtnFunction()
         {
+			UI.ResetBools();
             UI.Injector();
-            UI.ResetBools();
             UI.Injector();
             Discord.Update();
             controlPanel.Controls.Clear();
