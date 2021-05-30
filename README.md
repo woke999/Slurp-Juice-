@@ -13,7 +13,7 @@ Feel free to make a [Pull Request](https://github.com/graalpurity/Slurp-Juice-/p
 Where ever you choose the build location you need to extract the ace folder to that location
 
 # Discord
-Our [discord](https://discord.gg/K8VQZutWkA) is for people who want to contribute, want to exploit together, or just want to have fun in a community with others like them
+Our [discord](https://discord.gg/SpRYUvDDfy) is for people who want to contribute, want to exploit together, or just want to have fun in a community with others like them
 
 # Downlods
 * Download the source, open it in Visual Studio and build the project
